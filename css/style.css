@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css?family=Raleway:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic");
+
+:root{
+    --background-clr : #773344;
+    --foreground-clr : #D44D5C;
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+    font-family:"Raleway",sans-serif;
+}
+
+body{
+    margin:0;
+    padding: 0;
+    height:100vh;
+    display:grid;
+    place-items:center;
+    background: var(--background-clr);
+}
+
+.profile-card{
+    width:90%;
+    display:flex;
+    padding:2rem 0;
+    flex-direction: column;
+    align-items: center;
+    background: var(--foreground-clr);
+    color:#EDEDED;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+}
+
+.image{
+    width:100%;
+}
+
+.profile-picture{
+    width:11rem;
+    height:11rem;
+    border-radius:50%;
+    overflow: hidden;
+}
+
+.profile-card__name{
+    font-weight:500;
+    font-size:24px;
+    margin:0.5rem 0;
+}
+
+.profile-card__occupation{
+    font-weight:normal;
+    font-size: 20px;
+    text-transform:uppercase;
+    background: var(--background-clr);
+    padding:0.5rem 1rem;
+    margin:0.5rem 0;
+}
+
+.profile-card__description{
+    width:75%;
+    font-size:15px;
+}
+
+.links{
+    list-style: none;
+    margin:1rem 0;
+    padding:0;
+    width:75%;
+    display:flex;
+    justify-content: space-around;
+}
+
+.links__link{
+    text-decoration:none;
+    color:#EDEDED;
+    font-size:2rem;
+}
+
+.links__link_linkedin:hover,
+.links__link_linkedin:active{
+    color:#2867b2;
+}
+
+.links__link_dev:hover,
+.links__link_dev:active{
+    color:#1a1a1a;
+}
+.links__link_instagram:hover,
+.links__link_instagram:active{
+    color:#405de6;
+}   
+
+@media screen and (min-width:800px){
+    .profile-card{
+        width:80%;
+    }
+}
+@media screen and (min-width:1000px){
+    .profile-card{
+        width:45%;
+    }
+}
+
